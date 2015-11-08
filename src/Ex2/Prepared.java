@@ -2,6 +2,7 @@ package Ex2;
 
 import java.sql.*;
 
+//V1
 public class Prepared {
 
 	public static void main(String[] args) throws SQLException {
