@@ -2,8 +2,194 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a31e95e-8b1e-49d3-a95a-7c5522926fb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DB1/Ex2/Prepared.class" afterPath="$PROJECT_DIR$/out/production/DB1/Ex2/Prepared.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ex2/Prepared.java" afterPath="$PROJECT_DIR$/src/Ex2/Prepared.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ex3/Driver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ex3/GetCountForDepartment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ex3/GetEmployeesForDepartment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ex3/GreetTheDepartment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ex3/IncreaseSalariesForDepartment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Table setup/ex3.sql" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\CHANGES" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\COPYING" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\README" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\build.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\AssertionFailedException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\AssertionFailedException.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Blob.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Blob.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Buffer.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Buffer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\CharsetMapping.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\CharsetMapping.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Clob.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Clob.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\CompressedInputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\CompressedInputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Connection$UltraDevWorkAround.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Connection.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Connection.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\DatabaseMetaData.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\DatabaseMetaData.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Debug.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Debug.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Driver.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Driver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\EscapeProcessor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\EscapeProcessor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\EscapeTokenizer.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\EscapeTokenizer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Field.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Field.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\MiniAdmin.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\MiniAdmin.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\MysqlDefs.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\MysqlDefs.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\MysqlIO.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\MysqlIO.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NamedPipeSocketFactory$NamedPipeSocket.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NamedPipeSocketFactory$RandomAccessFileInputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NamedPipeSocketFactory$RandomAccessFileOutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NamedPipeSocketFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NamedPipeSocketFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NonRegisteringDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NonRegisteringDriver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NotImplemented.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NotImplemented.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NotUpdatable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\NotUpdatable.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\OutputStreamWatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\OutputStreamWatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\PacketTooBigException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\PacketTooBigException.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\PreparedStatement$BatchParams.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\PreparedStatement$ParseInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\PreparedStatement.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\PreparedStatement.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\ResultSet.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\ResultSet.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\ResultSetMetaData.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\ResultSetMetaData.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowData.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowData.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowDataDynamic$OperationNotSupportedException.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowDataDynamic.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowDataDynamic.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowDataStatic.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\RowDataStatic.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\SQLError.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\SQLError.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Security.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Security.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\SingleByteCharsetConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\SingleByteCharsetConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\SocketFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\SocketFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\StandardSocketFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\StandardSocketFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Statement.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Statement.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\StringUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\StringUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\TimeUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\TimeUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\UpdatableResultSet.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\UpdatableResultSet.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Util$RandStructcture.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Util.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\Util.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\WatchableOutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\WatchableOutputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\WatchableWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\WatchableWriter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\WriterWatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\WriterWatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\LogicalHandle.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\LogicalHandle.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlConnectionPoolDataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlConnectionPoolDataSource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlDataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlDataSource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlDataSourceFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlDataSourceFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlPooledConnection.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\jdbc2\optional\MysqlPooledConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\util\BaseBugReport.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\util\BaseBugReport.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\util\TimezoneDump.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\com\mysql\jdbc\util\TimezoneDump.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\lib\jdbc2_0-stdext.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\lib\jta-spec1_0_1.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\mysql-connector-java-3.0.10-stable-bin.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\org\gjt\mm\mysql\Driver.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\org\gjt\mm\mysql\Driver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\BaseTestCase.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\BaseTestCase.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\perf\BasePerfTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\perf\BasePerfTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\perf\LoadStorePerfTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\perf\LoadStorePerfTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\perf\RetrievalPerfTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\perf\RetrievalPerfTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\AppletRegressionTest$CustomAppletSecurity.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\AppletRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\AppletRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\BlobRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\BlobRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\ConnectionRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\ConnectionRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\MetaDataRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\MetaDataRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\MicroPerformanceRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\MicroPerformanceRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\NumbersRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\NumbersRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\PooledConnectionRegressionTest$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\PooledConnectionRegressionTest$ConnectionListener.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\PooledConnectionRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\PooledConnectionRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\ResultSetRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\ResultSetRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StatementRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StatementRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StressRegressionTest$BusyThread.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StressRegressionTest$ContentionThread.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StressRegressionTest$CreateThread.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StressRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StressRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StringRegressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\regression\StringRegressionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\BlobTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\BlobTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\ConnectionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\ConnectionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\DataSourceTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\DataSourceTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\DateTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\DateTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\EscapeProcessingTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\EscapeProcessingTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\MetadataTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\MetadataTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\MiniAdminTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\MiniAdminTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\NumbersTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\NumbersTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\SSLTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\SSLTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\StatementsTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\StatementsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\TimeTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\TimeTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\TransactionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\TransactionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\TraversalTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\TraversalTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\UpdatabilityTest.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\year 5\Git\IntelliJ\FYP-Database\mysql-connector-java-3.0.10-stable\testsuite\simple\UpdatabilityTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DB1.iml" afterPath="$PROJECT_DIR$/DB1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DB1.iws" />
@@ -35,6 +221,10 @@
         <option name="myItemId" value="MySQL - @localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="demo3" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -46,7 +236,21 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="demo" />
+        <option name="myItemId" value="demo3" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="employees" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - @localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -57,50 +261,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Prepared.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Ex2/Prepared.java">
+      <file leaf-file-name="Driver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ex3/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12469438">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="102" selection-start-line="14" selection-start-column="102" selection-end-line="14" selection-end-column="102" />
               <folding>
-                <marker date="1447009833908" expanded="true" signature="431:488" placeholder="select * fro..employees..." />
+                <marker date="1447011049004" expanded="true" signature="419:476" placeholder="select * fro..employees..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Delete.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ex1/Delete.java">
+      <file leaf-file-name="GetCountForDepartment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ex3/GetCountForDepartment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetEmployeesForDepartment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ex3/GetEmployeesForDepartment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GreetTheDepartment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ex3/GreetTheDepartment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncreaseSalariesForDepartment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ex3/IncreaseSalariesForDepartment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4987775">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1447009725070" expanded="true" signature="740:783" placeholder="delete from ..." />
+                <marker date="1447011048991" expanded="true" signature="1578:1620" placeholder="select * fro..employees..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ex2.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Table setup/ex2.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -133,6 +343,14 @@
         <option value="$PROJECT_DIR$/Table setup/ex2.sql" />
         <option value="$PROJECT_DIR$/src/Ex1/Delete.java" />
         <option value="$PROJECT_DIR$/src/Ex2/Prepared.java" />
+        <option value="$PROJECT_DIR$/Table setup/ex3.sql" />
+        <option value="$PROJECT_DIR$/src/Ex3/GetCountForDepartment.java" />
+        <option value="$PROJECT_DIR$/src/Ex3/Driver.java" />
+        <option value="$PROJECT_DIR$/src/Ex3/GetEmployeesForDepartment.java" />
+        <option value="$PROJECT_DIR$/src/Ex3/GreetTheDepartment.java" />
+        <option value="$PROJECT_DIR$/src/Ex3/IncreaseSalariesForDepartment.java" />
+        <option value="dbprocedure:/8091a941/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/demo3..get_count_for_department" />
+        <option value="dbprocedure:/8091a941/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/demo3..increase_salaries_for_department" />
       </list>
     </option>
   </component>
@@ -180,6 +398,24 @@
               <option name="myItemId" value="FYP-Database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FYP-Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql-connector-java-5.1.35-bin.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -188,6 +424,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="FYP-Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FYP-Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FYP-Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Table setup" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,7 +455,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Ex2" />
+              <option name="myItemId" value="Ex3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,10 +470,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ex1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,39 +487,26 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\year 5\Git\IntelliJ\FYP-Database\src\Ex3" />
+      <recent name="C:\year 5\Git\IntelliJ\FYP-Database\Table setup" />
       <recent name="C:\year 5\Project Year 5\Database\DB1\src\Ex2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Prepared">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="DB1" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Delete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.IncreaseSalariesForDepartment">
+    <configuration default="false" name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Ex1.*" />
+          <option name="PATTERN" value="Ex3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Ex1.Delete" />
+      <option name="MAIN_CLASS_NAME" value="Ex3.Driver" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -286,14 +519,74 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Prepared" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="GetCountForDepartment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Ex2.*" />
+          <option name="PATTERN" value="Ex3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Ex2.Prepared" />
+      <option name="MAIN_CLASS_NAME" value="Ex3.GetCountForDepartment" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DB1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GetEmployeesForDepartment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Ex3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Ex3.GetEmployeesForDepartment" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DB1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GreetTheDepartment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Ex3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Ex3.GreetTheDepartment" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DB1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="IncreaseSalariesForDepartment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Ex3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Ex3.IncreaseSalariesForDepartment" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -534,15 +827,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Delete" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Prepared" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Driver" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GetCountForDepartment" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GetEmployeesForDepartment" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GreetTheDepartment" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IncreaseSalariesForDepartment" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Prepared" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Delete" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.IncreaseSalariesForDepartment" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GreetTheDepartment" />
+        <item index="2" class="java.lang.String" itemvalue="Application.GetEmployeesForDepartment" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GetCountForDepartment" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Driver" />
       </list>
     </recent_temporary>
   </component>
@@ -557,7 +855,7 @@
       <option name="number" value="Default" />
       <updated>1447003057556</updated>
       <workItem from="1447003058877" duration="3932000" />
-      <workItem from="1447008956271" duration="877000" />
+      <workItem from="1447008956271" duration="4142000" />
     </task>
     <task id="LOCAL-00001" summary="C1">
       <created>1447009823649</created>
@@ -565,15 +863,21 @@
       <option name="project" value="LOCAL" />
       <updated>1447009823649</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="C2">
+      <created>1447009844614</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447009844614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4809000" />
+    <option name="totallyTimeSpent" value="8074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -582,12 +886,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26687115" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34202453" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20953101" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25567323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.027231468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -615,7 +919,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="C1" />
-    <option name="LAST_COMMIT_MESSAGE" value="C1" />
+    <MESSAGE value="C2" />
+    <option name="LAST_COMMIT_MESSAGE" value="C2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -631,7 +936,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1447009833908" expanded="true" signature="431:488" placeholder="select * fro..employees..." />
+            <marker date="1447009833908" expanded="true" signature="-1:-1" placeholder="select * fro..employees..." />
           </folding>
         </state>
       </provider>
@@ -677,9 +982,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Table setup/ex2.sql">
+    <entry file="file://$PROJECT_DIR$/src/Ex1/Delete.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1447009725070" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ex2/Prepared.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70660144">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <marker date="1447009833908" expanded="true" signature="-1:-1" placeholder="select * fro..employees..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar!/com/mysql/jdbc/Connection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.040189125">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbprocedure:/8091a941/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/demo3..get_count_for_department">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar!/com/mysql/jdbc/CallableStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35460994">
+          <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Table setup/ex1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Table setup/ex3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.20190024">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Table setup/ex2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.111638956">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -688,31 +1068,54 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/console.sql">
+    <entry file="dbDummy://dbprocedure:/8091a941/f4c673e6-24dc-4997-88e4-cdefacf7dc7e/demo3..increase_salaries_for_department">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.04047619">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ex1/Delete.java">
+    <entry file="file://$PROJECT_DIR$/src/Ex3/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <caret line="14" column="102" selection-start-line="14" selection-start-column="102" selection-end-line="14" selection-end-column="102" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1447009725070" expanded="true" signature="740:783" placeholder="delete from ..." />
+            <marker date="1447011049004" expanded="true" signature="419:476" placeholder="select * fro..employees..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ex2/Prepared.java">
+    <entry file="file://$PROJECT_DIR$/src/Ex3/GetCountForDepartment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12469438">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ex3/GetEmployeesForDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ex3/GreetTheDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ex3/IncreaseSalariesForDepartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4987775">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
           <folding>
-            <marker date="1447009833908" expanded="true" signature="431:488" placeholder="select * fro..employees..." />
+            <marker date="1447011048991" expanded="true" signature="1578:1620" placeholder="select * fro..employees..." />
           </folding>
         </state>
       </provider>

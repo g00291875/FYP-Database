@@ -4,7 +4,7 @@
     <data-source name="MySQL - @localhost" uuid="f4c673e6-24dc-4997-88e4-cdefacf7dc7e">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>demo.* demo2.*</schema-pattern>
+      <schema-pattern>demo.* demo2.* demo3.*</schema-pattern>
       <default-schemas>performance_schema.*</default-schemas>
     </data-source>
   </component>

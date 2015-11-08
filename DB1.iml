@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/mysql-connector-java-3.0.10-stable/mysql-connector-java-3.0.10-stable-bin.jar!/" />
+          <root url="jar://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -18,11 +18,25 @@
     </orderEntry>
     <orderEntry type="module-library">
       <library>
+        <ANNOTATIONS>
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
+        </ANNOTATIONS>
         <CLASSES>
-          <root url="jar://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
         </CLASSES>
-        <JAVADOC />
-        <SOURCES />
+        <JAVADOC>
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
+        </JAVADOC>
+        <NATIVE>
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
+        </NATIVE>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" />
+        </SOURCES>
+        <jarDirectory url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" recursive="false" />
+        <jarDirectory url="jar://$MODULE_DIR$/../../../Project Year 5/archive/._mysql-connector-java-5.1.29-bin.jar!/" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
