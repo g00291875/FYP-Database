@@ -1,0 +1,500 @@
+<?xml version='1.0'?>
+<!--
+Copyright (C) 2002 MySQL AB
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-->
+
+<!-- version $Id: build.xml,v 1.26.2.22 2004/01/07 05:06:51 mmatthew Exp $ -->
+
+<project name="MySQL Connector/J" default="dist" basedir=".">
+	<property name="major_version" value="3"/>
+	<property name="minor_version" value="0"/>
+	<property name="subminor_version" value="10"/>
+	<property name="version_status" value="stable"/>
+	
+	<property name="version" value="${major_version}.${minor_version}.${subminor_version}-${version_status}"/>
+	<property name="prodName" value="mysql-connector-java"/>
+	<property name="extra.version" value=""/>
+	<property name="fullProdName" value="${prodName}-${version}${extra.version}"/>
+	
+	<property name="buildDir" value="../build-mysql-jdbc"/>
+	<property name="distDir" value="../dist-mysql-jdbc"/>
+	<property name="junit.results" value="${buildDir}/junit"/>
+	
+	<property name="test.jvm.prefix" value="default-jvm-"/>
+	
+	<path id="project.build.classpath">
+    	<fileset dir="lib-nodist">
+        	<include name="**/*.jar"/>
+      	</fileset>
+      	
+      	<fileset dir="lib">
+        	<include name="**/*.jar"/>
+      	</fileset>
+      	
+      	<pathelement location="${buildDir}/${fullProdName}" />
+  	</path>
+	
+	<!-- Begin: Clover coverage tool -->
+
+    
+    <!-- =================================================================== -->
+    <!-- Clover setup -->
+    <!-- =================================================================== -->
+  
+    
+    <property name="clover.initstring" value="${buildDir}/clover/db/mycoverage.db"/>
+
+    <path id="clover.classpath">  
+    	<pathelement path="/src/clover-0.6b/lib/clover.jar"/>  
+    	<pathelement path="/src/clover-0.6b/lib/velocity.jar"/> 
+	</path>
+
+
+    <target name="with.clover">    
+    	<property name="build.compiler"            
+    		value="org.apache.tools.ant.taskdefs.CloverCompilerAdapter"/>
+    </target>
+    
+    <target name="clover.report.html">  
+    	<java classname="com.cortexeb.tools.clover.reporters.html.HtmlReporter"
+    	jvm="/jdk1.3.1/bin/java" fork="yes">   
+    	<arg line="--outputdir ${buildDir}/clover/report --showSrc --initstring ${clover.initstring} --title 'MySQL JDBC Driver ${version}'"/>   
+    	<classpath refid="clover.classpath"/>  
+    	</java>
+    </target>
+
+
+    
+    <!-- =================================================================== -->
+    <!-- run Clover coverage viewer -->
+    <!-- =================================================================== -->
+    
+    <target name="report.view">
+		<echo>Launching coverage viewer</echo>
+		<java classname="com.cortexeb.tools.clover.reporters.jfc.Viewer" fork="yes">
+	    	<arg value="${clover.initstring}"/>
+	    	<classpath refid="clover.classpath"/>
+		</java>
+    </target>
+	
+	<!-- End: Clover coverage tool -->
+	
+	
+	<target name="init" depends="clean">
+		<tstamp/>
+		<filter token="VERSION" value="${version}"/>
+
+		<copy todir="${buildDir}/${fullProdName}" filtering="true">
+			<fileset dir="." excludes="**/CVS">
+				<patternset id="classjar" >
+    					<exclude name="**/*.class*"/>
+    					<exclude name="**/*.jar"/>
+  				</patternset>
+			</fileset>
+			
+			<filterset>
+      			<filter token="MYSQL_CJ_MAJOR_VERSION" value="${major_version}"/>
+      			<filter token="MYSQL_CJ_MINOR_VERSION" value="${minor_version}"/>
+      			<filter token="MYSQL_CJ_SUBMINOR_VERSION" value="${subminor_version}"/>
+      			<filter token="MYSQL_CJ_VERSION_STATUS" value="${version_status}"/>
+      			<filter token="MYSQL_CJ_VERSION" value="${version}"/>
+      			<filter token="MYSQL_CJ_FULL_PROD_NAME" value="${fullProdName}"/>
+    		</filterset>	
+		</copy>
+		
+		<copy todir="${buildDir}/${fullProdName}" filtering="false">
+			<fileset dir="." excludes="**/CVS">
+				<patternset id="dojar" >
+    					<include name="**/*.jar*"/>
+  				</patternset>
+			</fileset>
+		</copy>
+
+		<mkdir dir="${buildDir}/clover" />
+		<mkdir dir="${buildDir}/clover/db" />
+		<mkdir dir="${buildDir}/clover/report" />
+	</target>
+
+	<target name="dist" depends="init, compile">
+		
+		<delete file="${buildDir}/${fullProdName}-bin.jar"/>
+		<delete file="${distDir}/${fullProdName}.jar"/>
+		
+		<mkdir dir="${distDir}" />
+
+		<jar jarfile="${buildDir}/${fullProdName}/${fullProdName}-bin.jar"
+			basedir="${buildDir}/${fullProdName}"
+			includes="**/*.class,COPYING,README"
+			excludes="testsuite/**"
+			index="true"
+		/>
+ 
+		<tar destfile="${distDir}/${fullProdName}.tar.gz"
+			compression="gzip" longfile="gnu">
+			<tarfileset dir="${buildDir}">
+				<patternset id="non.test.sources" >
+    					<exclude name="**/*.nb*"/>
+    					<exclude name="**/*.bak"/>
+    					<exclude name="**/*.*~"/>
+    					<exclude name="**/lib-nodist/*"/>
+    					<exclude name="**/clover/*"/>
+    					<exclude name="**/checkstyle/*"/>
+  				</patternset>
+			</tarfileset>
+		</tar>
+		
+		
+		<jar jarfile="${distDir}/${fullProdName}.zip">
+			<fileset dir="${buildDir}">
+				<patternset id="non.test.sources" >
+    					<exclude name="**/*.nb*"/>
+    					<exclude name="**/*.bak"/>
+    					<exclude name="**/*.*~"/>
+    					<exclude name="**/lib-nodist/*"/>
+    					<exclude name="**/clover/*"/>
+    					<exclude name="**/checkstyle/*"/>
+  				</patternset>
+			</fileset>
+		</jar>
+		
+	</target>
+	
+	
+	<target name="test.multi" 
+		depends="-test.multi.1,-test.multi.2,-test.multi.3,
+		-test.multi.3,-test.multi.4,-test.multi.5,
+		-test.multi.6,-test.multi.7,-test.multi.8">
+	</target>
+	
+	<target name="-test.multi.1" if="com.mysql.jdbc.compliance.url.1">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.1}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.2" if="com.mysql.jdbc.compliance.url.2">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.2}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.3" if="com.mysql.jdbc.compliance.url.3">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.3}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.4" if="com.mysql.jdbc.compliance.url.4">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.4}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.5" if="com.mysql.jdbc.compliance.url.5">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.5}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.6" if="com.mysql.jdbc.compliance.url.6">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.6}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.7" if="com.mysql.jdbc.compliance.url.7">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.7}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="-test.multi.8" if="com.mysql.jdbc.compliance.url.8">
+		<property name="com.mysql.jdbc.testsuite.url" value="${com.mysql.jdbc.testsuite.url.8}"/>
+		<antcall target="test"/>
+	</target>
+	
+	<target name="test" depends="compile">
+	  <mkdir dir="${junit.results}"/>
+	  
+	  <junit printSummary="yes" fork="on">
+		<jvmarg value="-Xmx256m"/>
+	  	<sysproperty key="com.mysql.jdbc.testsuite.url" value="jdbc:mysql:///test"/>
+	  	<classpath>
+      	 	<pathelement location="${buildDir}/${fullProdName}" />
+      	 	<pathelement location="./lib-nodist/providerutil.jar" />
+      	 	<pathelement location="./lib-nodist/fscontext.jar" />
+    	 		<pathelement path="${java.class.path}" />
+    	 		<pathelement path="/src/clover-0.6b/lib/clover.jar"/>  
+  	  	</classpath>
+
+      	<formatter type="plain" />
+	<formatter type="xml"/>
+      
+      	<batchtest fork="yes" todir="${junit.results}">
+    			<fileset dir="${buildDir}/${fullProdName}">
+      	   		<include name="**/*Test.java" />
+    			</fileset>
+      	</batchtest>
+        </junit>
+	</target>
+	
+	<target name="test.with.clover">
+	  <mkdir dir="${junit.results}"/>
+	  <junit printSummary="yes">
+	  <sysproperty key="com.mysql.jdbc.testsuite.url" value="jdbc:mysql:///test"/>
+	  <classpath>
+      	 <pathelement location="${buildDir}/${fullProdName}" />
+      	 <pathelement location="./lib-nodist/providerutil.jar" />
+      	 <pathelement location="./lib-nodist/fscontext.jar" />
+    	 <pathelement path="${java.class.path}" />
+    	 <pathelement path="/src/clover-0.6b/lib/clover.jar"/>  
+  	  </classpath>
+
+      <formatter type="plain" />
+      
+      <batchtest fork="no" todir="${junit.results}">
+    	<fileset dir="${buildDir}/${fullProdName}">
+      	   <include name="**/*Test.java" />
+    	</fileset>
+      </batchtest>
+      </junit>
+	</target>
+
+	<!-- Runs compliance testsuite against multiple JVMs and server configs -->
+	
+	<target name="test.compliance.multijvm" 
+		depends="-test.compliance.multijvm.1,-test.compliance.multijvm.2,
+			-test.compliance.multijvm.3,-test.compliance.multijvm.4,
+			-test.compliance.multijvm.5,-test.compliance.multijvm.6,
+			-test.compliance.multijvm.6,-test.compliance.multijvm.7,
+			-test.compliance.multijvm.8"/>
+	
+	<target name="-test.compliance.multijvm.1" if="com.mysql.jdbc.compliance.jvm.1">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.1}"/>
+			<param name="test.jvm.prefix" value="jvm-1-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.2" if="com.mysql.jdbc.compliance.jvm.2">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.2}"/>
+			<param name="test.jvm.prefix" value="jvm-2-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.3" if="com.mysql.jdbc.compliance.jvm.3">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.3}"/>
+			<param name="test.jvm.prefix" value="jvm-3-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.4" if="com.mysql.jdbc.compliance.jvm.4">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.4}"/>
+			<param name="test.jvm.prefix" value="jvm-4-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.5" if="com.mysql.jdbc.compliance.jvm.5">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.5}"/>
+			<param name="test.jvm.prefix" value="jvm-5-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.6" if="com.mysql.jdbc.compliance.jvm.6">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.6}"/>
+			<param name="test.jvm.prefix" value="jvm-6-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.7" if="com.mysql.jdbc.compliance.jvm.7">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.7}"/>
+			<param name="test.jvm.prefix" value="jvm-7-"/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multijvm.8" if="com.mysql.jdbc.compliance.jvm.8">
+		<antcall target="test.compliance.multi">
+			<param name="com.mysql.jdbc.compliance.jvm" value="${com.mysql.jdbc.compliance.jvm.8}"/>
+			<param name="test.jvm.prefix" value="jvm-8-"/>
+		</antcall>
+	</target>
+	
+	<!-- Runs compliance testsuite against multiple server configurations -->
+	
+	<target name="test.compliance.multi" 
+		depends="-test.compliance.multi.1,-test.compliance.multi.2,-test.compliance.multi.3,
+		-test.compliance.multi.3,-test.compliance.multi.4,-test.compliance.multi.5,
+		-test.compliance.multi.6,-test.compliance.multi.7,-test.compliance.multi.8">
+	</target>
+	
+	<target name="-test.compliance.multi.1" if="com.mysql.jdbc.compliance.url.1">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.1}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-1."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.2" if="com.mysql.jdbc.compliance.url.2">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.2}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-2."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.3" if="com.mysql.jdbc.compliance.url.3">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.3}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-3."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.4" if="com.mysql.jdbc.compliance.url.4">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.4}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-4."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.5" if="com.mysql.jdbc.compliance.url.5">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.5}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-5."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.6" if="com.mysql.jdbc.compliance.url.6">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.6}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-6."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.7" if="com.mysql.jdbc.compliance.url.7">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.7}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-7."/>
+		</antcall>
+	</target>
+	
+	<target name="-test.compliance.multi.8" if="com.mysql.jdbc.compliance.url.8">
+		<antcall target="test.compliance">
+			<param name="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url.7}"/>
+			<param name="test.result.prefix" value="${test.jvm.prefix}config-8."/>
+		</antcall>
+	</target>
+	
+	<!-- 
+	
+		Tests for JDBC compliance. The JDBC compliance testsuite
+	    is not shipped with MySQL Connector/J as it is not licensible
+	    except from Sun.
+	     
+	    The properties com.mysql.jdbc.compliance.url and
+	    jdbc-compliance-location must be set
+	    prior to running this test. 
+	     
+	-->
+	
+	<target name="test.compliance" depends="compile">
+		<property name="compliance.jvm" value="java"/>
+		
+		<echo message="Running compliance tests against ${com.mysql.jdbc.compliance.url} with result filename prefix ${test.result.prefix}"/>
+		<mkdir dir="${junit.results}"/>
+		<junit printsummary="yes" jvm="${compliance.jvm}">
+			<sysproperty key="com.mysql.jdbc.compliance.url" value="${com.mysql.jdbc.compliance.url}"/>
+			<classpath>
+				<pathelement location="${buildDir}/${fullProdName}"/>
+				<fileset dir="lib-nodist">
+        			<include name="**/*.jar"/>
+      			</fileset>
+	      		<pathelement location="${jdbc-compliance-location}"/>
+	    	</classpath>
+	    	
+	    	<formatter type="xml"/>
+	    	
+	    	<test outfile="TEST-${test.result.prefix}BatchUpdateTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.BatchUpdateTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}ConnectionTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.ConnectionTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}DatabaseMetaDataTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.DatabaseMetaDataTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}EscapeSyntaxTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.EscapeSyntaxTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}PreparedStatementTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.PreparedStatementTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}ResultSetMetadataTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.ResultSetMetadataTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}ResultSetTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.ResultSetTest"/>
+	    		
+	    	<test outfile="TEST-${test.result.prefix}StatementTest" fork="yes" todir="${junit.results}" 
+	    		name="com.mysql.jdbc.compliance.tests.StatementTest"/>
+	    </junit>
+    </target>
+    
+	<target name="compile" depends="init, compile-driver, compile-testsuite">
+	</target>
+
+	<!-- Compiles the driver itself -->
+		
+	<target name="compile-driver" depends="init">
+		<javac srcdir="${buildDir}/${fullProdName}"
+			   destdir="${buildDir}/${fullProdName}"
+	        deprecation="off"
+			debug="on"
+			excludes="testsuite/**"
+		>
+			<classpath refid="project.build.classpath"/>
+		</javac>
+
+	</target>
+	
+	<!-- Compiles the JUnit testsuite -->
+	
+	<target name="compile-testsuite" depends="init, compile-driver">
+		<javac srcdir="${buildDir}/${fullProdName}"
+			   destdir="${buildDir}/${fullProdName}"
+	        deprecation="off"
+			debug="off"
+			
+		>
+			<classpath refid="project.build.classpath"/>
+		</javac>
+	</target>
+
+	<target name="realclean">
+		<delete dir="${buildDir}"/>
+		<delete>
+			<fileset dir="${distDir}" 
+				includes="${fullProdName}.zip,${fullProdName}.tar.gz"/>
+		</delete>
+	</target>
+
+    <target name="clean" unless="already.clean">
+		<delete dir="${buildDir}"/>
+		
+		<!-- AntCall seems to overwrite the target execution
+		     state, so we need to set a property to not nuke the 
+		     output dir every time :p -->
+		<property name="already.clean" value="true"/>
+	</target>
+</project>
