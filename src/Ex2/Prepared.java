@@ -1,7 +1,7 @@
 package Ex2;
 
 import java.sql.*;
-
+//V2
 //V1
 public class Prepared {
 
