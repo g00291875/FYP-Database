@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SQL Server -" uuid="3225f9a1-b91f-47d8-99d7-35456d7b41cb">
+      <secret-storage>master_key</secret-storage>
+      <user-name>toor</user-name>
+      <schema-pattern>songDatabase.dbo</schema-pattern>
+    </data-source>
+  </component>
+</project>

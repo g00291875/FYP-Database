@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="SQL Server -" uuid="3225f9a1-b91f-47d8-99d7-35456d7b41cb">
+    <database-info product="Microsoft SQL Server" version="12.00.702" jdbc-version="4.0" driver-name="Microsoft JDBC Driver 4.0 for SQL Server" driver-version="4.0.2206.100">
+      <extra-name-characters>$#@</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="dbo" catalog="songDatabase"/>
+    <table name="songTable" schema="dbo" catalog="songDatabase" type="TABLE">
+      <column name="Id" sqlType="int" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="song" sqlType="nchar" precision="50" scale="0" nullable="true" jdbcType="-15"/>
+      <column name="artist" sqlType="nchar" precision="50" scale="0" nullable="true" jdbcType="-15"/>
+      <primary-key name="PK__songTabl__3214EC07C16D7EAF" columns="Id"/>
+    </table>
+  </data-source>
+</component>
