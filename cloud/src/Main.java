@@ -1,16 +1,37 @@
+
+
+
 import java.sql.*;
+
+import com.microsoft.azure.storage.CloudStorageAccount;
+import com.microsoft.azure.storage.blob.CloudBlobClient;
+import com.microsoft.azure.storage.blob.CloudBlobContainer;
+import com.microsoft.azure.storage.table.CloudTableClient;
+
 
 public class Main {
     //private PreparedStatement sqlInsertName;
 
     public static void main(String[] args) {
+        // Define the connection-string with your values
+         final String storageConnectionString =
+                "DefaultEndpointsProtocol=http;" +
+                        "AccountName=muzikhost;" +
+                        "AccountKey=LgxjWwFSki3yYz5InTSpBvEyW7T59rqng/1yop7AZLEDkKj1k+Ke+nI7u27bLg1jEdup2LG5VwOeDGEVLAAzGg==";
+
         Connection myConn = null;
         ResultSet myRs = null;
         int result;
 
-        String url = "jdbc:sqlserver://zlxgbmw91b.database.windows.net:1433;"+
-         "database=songDatabase;user=toor@zlxgbmw91b;" +
-                "password=Zqlllx$8;";
+//        DefaultEndpointsProtocol=https;
+//        AccountName=storagesample;
+//        AccountKey=<account-key>
+
+//        String storageConnectionString =
+//                "jdbc:sqlserver://zlxgbmw91b.database.windows.net:1433;" +
+//                        "database=songDatabase;" +
+//                        "user=toor@zlxgbmw91b;" +
+//                        "password=Zqlllx$8";
 
         String con = "jdbc:sqlserver://zlxgbmw91b.database.windows.net:1433;" +
                 "database=songDatabase;" +
@@ -18,30 +39,72 @@ public class Main {
                 "password=Zqlllx$8;";
 
         PreparedStatement sqlInsertName = null;
-        try {
-            Connection connection = DriverManager.getConnection( url);
+//        try {
+//            Connection connection = DriverManager.getConnection(storageConnectionString );
+//
+//            sqlInsertName = connection.prepareStatement(
+//                    "INSERT INTO songTable ( id, song, artist ) " +
+//                            "VALUES ( ?,  ? , ? )" );
+//
+//            sqlInsertName.setInt(1, 1);
+//            sqlInsertName.setString( 2, "song2" );
+//            sqlInsertName.setString( 3, "artist2" );
+//            result = sqlInsertName.executeUpdate();
+//
+//            if ( result == 0 ) {
+//                connection.rollback(); // rollback insert
+//                System.out.println("roll back");
+//                //return false;          // insert unsuccessful
+//            }
+//
+//            connection.commit();
+//            sqlInsertName.close();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 
-            sqlInsertName = connection.prepareStatement(
-                    "INSERT INTO songTable ( id, song, artist ) " +
-                            "VALUES ( ?,  ? , ? )" );
+        try
+        {
+            // Retrieve storage account from connection-string.
+            CloudStorageAccount storageAccount = CloudStorageAccount.parse(storageConnectionString);
 
-            sqlInsertName.setInt(1, 1);
-            sqlInsertName.setString( 2, "song1" );
-            sqlInsertName.setString( 3, "artist1" );
-            result = sqlInsertName.executeUpdate();
+            // Create the blob client.
+            CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
 
-            if ( result == 0 ) {
-                connection.rollback(); // rollback insert
-                System.out.println("roll back");
-                //return false;          // insert unsuccessful
-            }
+            // Get a reference to a container.
+            // The container name must be lower case
+            CloudBlobContainer container = blobClient.getContainerReference("thesongs");
 
-            connection.commit();
-            sqlInsertName.close();
-        } catch (SQLException e) {
+            // Create the container if it does not exist.
+            container.createIfNotExists();
+        }
+        catch (Exception e)
+        {
+            // Output the stack trace.
             e.printStackTrace();
         }
 
+        try
+        {
+            // Retrieve storage account from connection-string.
+            CloudStorageAccount storageAccount =
+                    CloudStorageAccount.parse(storageConnectionString);
+
+            // Create the table client.
+            CloudTableClient tableClient = storageAccount.createCloudTableClient();
+
+            // Loop through the collection of table names.
+            for (String table : tableClient.listTables())
+            {
+                // Output each table name.
+                System.out.println(table);
+            }
+        }
+        catch (Exception e)
+        {
+            // Output the stack trace.
+            e.printStackTrace();
+        }
 
 
                     //"encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
