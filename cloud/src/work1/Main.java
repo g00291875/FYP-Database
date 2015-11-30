@@ -1,4 +1,4 @@
-
+package work1;
 
 
 import java.sql.*;
@@ -6,6 +6,7 @@ import java.sql.*;
 import com.microsoft.azure.storage.CloudStorageAccount;
 import com.microsoft.azure.storage.blob.CloudBlobClient;
 import com.microsoft.azure.storage.blob.CloudBlobContainer;
+import com.microsoft.azure.storage.table.CloudTable;
 import com.microsoft.azure.storage.table.CloudTableClient;
 
 
@@ -63,20 +64,47 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
+//        try
+//        {
+//            // Retrieve storage account from connection-string.
+//            CloudStorageAccount storageAccount = CloudStorageAccount.parse(storageConnectionString);
+//
+//            // Create the blob client.
+//            CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
+//
+//            // Get a reference to a container.
+//            // The container name must be lower case
+//            CloudBlobContainer container = blobClient.getContainerReference("thesongs");
+//
+//            // Create the container if it does not exist.
+//            container.createIfNotExists();
+//        }
+//        catch (Exception e)
+//        {
+//            // Output the stack trace.
+//            e.printStackTrace();
+//        }
+
         try
         {
             // Retrieve storage account from connection-string.
-            CloudStorageAccount storageAccount = CloudStorageAccount.parse(storageConnectionString);
+            CloudStorageAccount storageAccount =
+                    CloudStorageAccount.parse(storageConnectionString);
 
-            // Create the blob client.
-            CloudBlobClient blobClient = storageAccount.createCloudBlobClient();
+            // Create the table client.
+            CloudTableClient tableClient = storageAccount.createCloudTableClient();
 
-            // Get a reference to a container.
-            // The container name must be lower case
-            CloudBlobContainer container = blobClient.getContainerReference("thesongs");
+            // Create the table if it doesn't exist.
+            String tableName = "SongName";
+            CloudTable cloudTable = new CloudTable(tableName,tableClient);
+            cloudTable.createIfNotExists();
 
-            // Create the container if it does not exist.
-            container.createIfNotExists();
+            String artistTable = "Artist";
+            cloudTable = new CloudTable(artistTable,tableClient);
+            cloudTable.createIfNotExists();
+            String blobTable = "songBlob";
+             cloudTable = new CloudTable(blobTable,tableClient);
+            cloudTable.createIfNotExists();
         }
         catch (Exception e)
         {
