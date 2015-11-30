@@ -2,13 +2,20 @@ package work4;
 
 
 import com.microsoft.azure.storage.CloudStorageAccount;
+import com.microsoft.azure.storage.StorageException;
 import com.microsoft.azure.storage.blob.*;
 import com.microsoft.azure.storage.table.CloudTable;
 import com.microsoft.azure.storage.table.CloudTableClient;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.net.URI;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -134,10 +141,10 @@ public class Main {
             CloudBlobContainer container = blobClient.getContainerReference("muzikhost");
 
             // Define the path to a local file.
-            final String filePath = "C:\\the set\\set.txt";
+            final String filePath = "C:\\the set\\testsong.mp3";
 
             // Create or overwrite the "myimage.jpg" blob with contents from a local file.
-            CloudBlockBlob blob = container.getBlockBlobReference("set.txt");
+            CloudBlockBlob blob = container.getBlockBlobReference("testsong.mp3");
             File source = new File(filePath);
             blob.upload(new FileInputStream(source), source.length());
         }
@@ -159,13 +166,35 @@ public class Main {
             // Retrieve reference to a previously created container.
             CloudBlobContainer container = blobClient.getContainerReference("muzikhost");
 
+
+            Path path = Paths.get("C://test//testsong.mp3");
+
+            Files.createDirectories(path.getParent());
+
+            try {
+                Files.createFile(path);
+            } catch (FileAlreadyExistsException e) {
+                System.err.println("already exists: " + e.getMessage());
+            }
             // Loop through each blob item in the container.
             for (ListBlobItem blobItem : container.listBlobs()) {
                 // If the item is a blob, not a virtual directory.
                 if (blobItem instanceof CloudBlob) {
                     // Download the item and save it to a file with the same name.
                     CloudBlob blob = (CloudBlob) blobItem;
-                    System.out.println(blobItem.getUri());
+                    URI uri = blobItem.getUri();
+                    String blobpath = uri.getPath();
+                    String idStr = blobpath.substring(blobpath.lastIndexOf('/')+1 );
+                    try {
+                        if(new String("testsong.mp3").equals(idStr)) {
+                            blob.download(new FileOutputStream("C://test//mydownloaded.mp3"));
+                        }
+                    } catch (StorageException e) {
+                        e.printStackTrace();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+
                 }
             }
         }
