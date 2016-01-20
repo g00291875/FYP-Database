@@ -20,4 +20,18 @@
       <primary-key name="PK__songTabl__3214EC07C16D7EAF" columns="Id"/>
     </table>
   </data-source>
+  <data-source name="MySQL - @localhost" uuid="7ff581d9-ab9e-444e-b9b1-1f505edc5c02">
+    <database-info product="MySQL" version="5.7.9-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="localsong"/>
+    <table name="localsongdatabase" schema="" catalog="localsong" type="TABLE">
+      <column name="songID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="songName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="artistName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="fileData" sqlType="VARBINARY" precision="8000" scale="0" nullable="true" jdbcType="-3"/>
+    </table>
+  </data-source>
 </component>

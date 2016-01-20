@@ -1,6 +1,9 @@
 package work1;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.*;
 
 import com.microsoft.azure.storage.CloudStorageAccount;
@@ -14,6 +17,7 @@ public class Main {
     //private PreparedStatement sqlInsertName;
 
     public static void main(String[] args) {
+
         // Define the connection-string with your values
          final String storageConnectionString =
                 "DefaultEndpointsProtocol=http;" +
@@ -24,15 +28,6 @@ public class Main {
         ResultSet myRs = null;
         int result;
 
-//        DefaultEndpointsProtocol=https;
-//        AccountName=storagesample;
-//        AccountKey=<account-key>
-
-//        String storageConnectionString =
-//                "jdbc:sqlserver://zlxgbmw91b.database.windows.net:1433;" +
-//                        "database=songDatabase;" +
-//                        "user=toor@zlxgbmw91b;" +
-//                        "password=Zqlllx$8";
 
         String con = "jdbc:sqlserver://zlxgbmw91b.database.windows.net:1433;" +
                 "database=songDatabase;" +
@@ -40,16 +35,32 @@ public class Main {
                 "password=Zqlllx$8;";
 
         PreparedStatement sqlInsertName = null;
+        PreparedStatement sqlIDone = null;
+
         try {
-            Connection connection = DriverManager.getConnection(storageConnectionString );
+            String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+            Class.forName( driver );
+            Connection connection = DriverManager.getConnection(con );
+
+            sqlIDone = connection.prepareStatement("SET IDENTITY_INSERT MuzikHostTable ON");
+            sqlIDone.executeUpdate();
+            connection.commit();
+
+//            sqlInsertName = connection.prepareStatement(
+//                            " INSERT INTO MuzikHostTable ( id, songName, artistName, song ) " +
+//                            "VALUES ( ?,  ? , ? , ?) ");
 
             sqlInsertName = connection.prepareStatement(
-                    "INSERT INTO songTable ( id, song, artist ) " +
-                            "VALUES ( ?,  ? , ? )" );
+                    " INSERT INTO songTable ( id, song, artist) " +
+                            "VALUES ( ?,  ? , ? ) ");
+         //   + "SET IDENTITY_INSERT MuzikHostTable ON GO");
 
-            sqlInsertName.setInt(1, 1);
-            sqlInsertName.setString( 2, "song2" );
-            sqlInsertName.setString( 3, "artist2" );
+            File file = new File("C:\\the set\\a.mp3");
+
+            sqlInsertName.setInt(1, 3);
+            sqlInsertName.setString( 2, "song3" );
+            sqlInsertName.setString( 3, "artist3" );
+            //sqlInsertName.setBinaryStream(4, new FileInputStream(file), (int) file.length());
             result = sqlInsertName.executeUpdate();
 
             if ( result == 0 ) {
@@ -60,6 +71,8 @@ public class Main {
 
             connection.commit();
             sqlInsertName.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -6,5 +6,11 @@
       <user-name>toor</user-name>
       <schema-pattern>songDatabase.dbo</schema-pattern>
     </data-source>
+    <data-source name="MySQL - @localhost" uuid="7ff581d9-ab9e-444e-b9b1-1f505edc5c02">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>localsong.*</schema-pattern>
+      <default-schemas>sakila.*</default-schemas>
+    </data-source>
   </component>
 </project>
