@@ -11,11 +11,11 @@ public class SaveImage
     {
         DB db = new DB();
         Connection conn=db.dbConnect(
-                "jdbc:jtds:sqlserver://localhost:3306/localsong","root","root");
+                "jdbc:mysql://localhost:3306/localsong","root","root");
 
 
-        db.insertImage(conn,"C://theset//test.mp3");
-      //  db.getImageData(conn);
+     //   db.insertImage(conn,"C://theset//test2.mp3");
+        db.getImageData(conn);
     }
 
     private void connect() throws Exception
@@ -79,11 +79,11 @@ class DB
             query = ("insert into localsongdatabase VALUES(?,?,?,?)");
             pstmt = conn.prepareStatement(query);
             pstmt.setInt(1, 1);
-            pstmt.setString(2,file.getName());
-            pstmt.setInt(3, len);
+            pstmt.setString(2, "song1");
+            pstmt.setString(3, "artist1");
 
             // Method used to insert a stream of bytes
-            pstmt.setBinaryStream(3, fis, len);
+            pstmt.setBinaryStream(4, fis, len);
             pstmt.executeUpdate();
 
         }
@@ -100,7 +100,7 @@ class DB
         String query;
         try
         {
-            query = "select data from tableimage";
+            query = "select fileData from localsongdatabase";
             Statement state = conn.createStatement();
             ResultSet rs = state.executeQuery(query);
             if (rs.next())
@@ -108,7 +108,7 @@ class DB
                 fileBytes = rs.getBytes(1);
                 OutputStream targetFile=
                         new FileOutputStream(
-                                "d://filepath//new.JPG");
+                                "C:\\test\\fromDB.mp3");
 
                 targetFile.write(fileBytes);
                 targetFile.close();
